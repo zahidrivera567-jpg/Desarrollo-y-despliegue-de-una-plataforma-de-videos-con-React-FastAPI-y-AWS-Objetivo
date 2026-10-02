@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+  background-color: #0f0f0f;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #121212;
+  border: 1px solid #303030;
+  border-radius: 40px 0 0 40px;
+  color: white;
+  outline: none;
+}
+
+.search-button {
+  padding: 8px 20px;
+  background-color: #222222;
+  border: 1px solid #303030;
+  border-left: none;
+  border-radius: 0 40px 40px 0;
+  color: white;
+  cursor: pointer;
+}
+
+/* Layout Main */
+.main-layout {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #0f0f0f;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar-item:hover, .sidebar-item.active {
+  background-color: #272727;
+}
+
+/* Video Grid */
+.content-area {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Video Card */
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.thumbnail-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #272727;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-details {
+  display: flex;
+  gap: 12px;
+}
+
+.channel-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.channel-name, .video-stats {
+  font-size: 12px;
+  color: #aaa;
+}
+/* Estilos adicionales para la funcionalidad de interacción */
+.icon-button {
+  cursor: pointer;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+/* Títulos y cabeceras personalizadas por pestaña */
+.page-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #303030;
+  padding-bottom: 12px;
+}
+
+.page-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Chips de la sección Explorar */
+.explore-categories {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.category-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #272727;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.category-chip:hover {
+  background-color: #3f3f3f;
+}
